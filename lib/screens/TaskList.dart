@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:krates/components/TaskCard.dart';
 import 'package:krates/models/Task.dart';
@@ -31,9 +30,6 @@ class TaskListScreenState extends State<TaskListScreen> {
             return TaskForm();
           })).then((newTask) => {if (newTask != null) _atualiza(newTask)});
         },
-      ),
-      appBar: new AppBar(
-        title: new Text("Backlog"),
       ),
     );
   }

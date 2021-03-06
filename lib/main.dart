@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:krates/screens/TaskList.dart';
+import 'package:krates/screens/MainScreen.dart';
 
 void main() {
   runApp(KratesApp());
@@ -16,7 +16,7 @@ class KratesApp extends StatelessWidget {
           ),
         ),
         home: new Scaffold(
-          body: TaskListScreen(),
+          body: MainScreen(),
         ));
   }
 }
