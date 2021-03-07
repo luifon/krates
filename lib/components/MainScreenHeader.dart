@@ -9,7 +9,7 @@ class MainScreenHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Olá, Luiz",
+            "Hello, John",
             style: TextStyle(
               fontSize: 28.0,
               color: Colors.white,
