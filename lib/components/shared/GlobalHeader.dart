@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:krates/custom-style/CustomColors.dart';
 
-class MainScreenHeader extends StatelessWidget {
+class GlobalHeader extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(32.0, 72.0, 32.0, 24.0),
+      color: Color(primaryColor),
+      padding: const EdgeInsets.fromLTRB(32.0, 70.0, 32.0, 24.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -34,4 +36,8 @@ class MainScreenHeader extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => new Size.fromHeight(100.0);
 }

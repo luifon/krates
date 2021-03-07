@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:krates/components/InputWidget.dart';
 import 'package:krates/models/Task.dart';
 
-class TaskForm extends StatelessWidget {
+class TaskFormScreen extends StatelessWidget {
   final TextEditingController _taskNameController = TextEditingController();
   final TextEditingController _taskDescriptionController =
   TextEditingController();

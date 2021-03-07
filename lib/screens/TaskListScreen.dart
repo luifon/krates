@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:krates/components/TaskCard.dart';
+import 'file:///C:/Users/luiz-/Documents/krates/lib/components/Task/TaskCard.dart';
 import 'package:krates/models/Task.dart';
 import 'package:krates/screens/TaskFormScreen.dart';
 
@@ -27,14 +27,14 @@ class TaskListScreenState extends State<TaskListScreen> {
         child: Icon(Icons.add),
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return TaskForm();
-          })).then((newTask) => {if (newTask != null) _atualiza(newTask)});
+            return TaskFormScreen();
+          })).then((newTask) => {if (newTask != null) _update(newTask)});
         },
       ),
     );
   }
 
-  void _atualiza(Task newTask) {
+  void _update(Task newTask) {
     setState(() {
       widget._taskList.add(newTask);
     });

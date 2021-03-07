@@ -1,45 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:krates/components/MainScreenHeader.dart';
-import 'package:krates/components/MenuBox.dart';
-import 'package:krates/screens/TaskList.dart';
+import 'file:///C:/Users/luiz-/Documents/krates/lib/components/shared/MenuBox.dart';
+import 'package:krates/custom-style/CustomColors.dart';
+import 'package:krates/screens/ProjectListScreen.dart';
 
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff00796B),
+      backgroundColor: Color(primaryColor),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            MainScreenHeader(),
             SingleChildScrollView(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: SizedBox(
-                        height: 350.0,
-                        child: TaskListScreen(),
-                      ),
-                    ),
-                    SizedBox(height: 10.0,),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: SizedBox(
-                        height: 350.0,
-                        child: TaskListScreen(),
-                      ),
-                    ),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  // TODO create components here
+                ],
               ),
             ),
           ],
         ),
       ),
-      bottomNavigationBar: MainScreenMenu(),
+      bottomNavigationBar: ProjectList(),
     );
   }
 }
