@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/luiz-/Documents/krates/lib/components/Task/TaskCard.dart';
+import 'package:krates/components/task/TaskCard.dart';
 import 'package:krates/models/Task.dart';
-import 'package:krates/screens/TaskFormScreen.dart';
+import 'package:krates/screens/task/TaskFormScreen.dart';
 
 class TaskListScreen extends StatefulWidget {
   final List<Task> _taskList = List.from([]);

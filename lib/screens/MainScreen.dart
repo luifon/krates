@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'file:///C:/Users/luiz-/Documents/krates/lib/components/shared/MenuBox.dart';
 import 'package:krates/custom-style/CustomColors.dart';
-import 'package:krates/screens/ProjectListScreen.dart';
+import 'file:///C:/Users/luiz-/Documents/krates/lib/screens/project/ProjectListScreen.dart';
 
 class MainScreen extends StatelessWidget {
   @override

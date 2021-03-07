@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:krates/custom-style/CustomColors.dart';
 
-class GlobalHeader extends StatelessWidget implements PreferredSizeWidget {
+class HomeHeader extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,6 +38,5 @@ class GlobalHeader extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => new Size.fromHeight(100.0);
 }

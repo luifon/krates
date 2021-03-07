@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
-import 'package:krates/components/InputWidget.dart';
+import 'package:krates/components/shared/InputWidget.dart';
 
 class ProjectFormScreen extends StatelessWidget {
   final TextEditingController _projectNameController = TextEditingController();
+  final TextEditingController _projectDescriptionController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +12,16 @@ class ProjectFormScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            InputWidget(_projectNameController, 'Task Name', 'Required.', false),
+            InputWidget(
+                _projectNameController, 'Project Name', 'Required.', false),
+            InputWidget(
+                _projectDescriptionController, 'Project Description', 'Required.', true),
             ElevatedButton(
               child: Text('Create'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.teal,
               ),
-              onPressed: () => _createTask(context),
+              onPressed: () => _createProject(context),
             ),
           ],
         ),
@@ -26,9 +29,8 @@ class ProjectFormScreen extends StatelessWidget {
     );
   }
 
-  void _createTask(BuildContext context) {
+  void _createProject(BuildContext context) {
     final String? projectName = _projectNameController.text;
     Navigator.pop(context, projectName);
   }
-
 }

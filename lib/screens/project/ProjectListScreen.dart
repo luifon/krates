@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:krates/components/Project/ProjectCard.dart';
-import 'package:krates/screens/ProjectForm.dart';
+import 'package:krates/components/project/ProjectBox.dart';
+import 'package:krates/screens/project/ProjectForm.dart';
 
 class ProjectList extends StatefulWidget {
   final List<String> _projectList = List.from([]);
@@ -13,22 +13,28 @@ class _ProjectListState extends State<ProjectList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemCount: widget._projectList.length,
-        itemBuilder: (context, index) {
-          final taskItem = widget._projectList[index];
-          return ProjectCard(taskItem);
-        },
+      body: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        crossAxisCount: 3,
+        children: buildProjectBoxList(),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
             return ProjectFormScreen();
-          })).then((newTask) => {if (newTask != null) _update(newTask)});
+          })).then(
+              (newProject) => {if (newProject != null) _update(newProject)});
         },
       ),
     );
+  }
+
+  List<ProjectBox> buildProjectBoxList() {
+    return widget._projectList.map((a) => ProjectBox(a)).toList();
   }
 
   void _update(String newProject) {

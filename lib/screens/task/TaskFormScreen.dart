@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:krates/components/InputWidget.dart';
+import 'package:krates/components/shared/InputWidget.dart';
 import 'package:krates/models/Task.dart';
 
 class TaskFormScreen extends StatelessWidget {
