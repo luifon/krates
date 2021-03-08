@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:krates/custom-style/CustomColors.dart';
 
-class HomeHeader extends StatelessWidget implements PreferredSizeWidget {
+class GlobalHeader extends StatelessWidget implements PreferredSizeWidget {
+  final String _text;
+
+  GlobalHeader(this._text);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -11,7 +15,7 @@ class HomeHeader extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Hello, John",
+            _text,
             style: TextStyle(
               fontSize: 28.0,
               color: Colors.white,

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+
 import 'file:///C:/Users/luiz-/Documents/krates/lib/components/shared/MenuBox.dart';
-import 'package:krates/custom-style/CustomColors.dart';
 import 'file:///C:/Users/luiz-/Documents/krates/lib/screens/project/ProjectListScreen.dart';
 
 class MainScreen extends StatelessWidget {
+  final String _projectName;
+
+  MainScreen(this._projectName);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(primaryColor),
+      appBar: AppBar(title: Text(_projectName)),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -14,7 +14,6 @@ class KratesApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: customTheme,
         home: new Scaffold(
-          appBar: HomeHeader(),
           body: ProjectList(),
         ));
   }

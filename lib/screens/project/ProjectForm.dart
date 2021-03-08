@@ -8,7 +8,7 @@ class ProjectFormScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Create new task')),
+      appBar: AppBar(title: Text('Create New Project')),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:krates/components/project/ProjectBox.dart';
+import 'package:krates/components/shared/GlobalHeader.dart';
 import 'package:krates/screens/project/ProjectForm.dart';
 
 class ProjectList extends StatefulWidget {
@@ -13,6 +14,7 @@ class _ProjectListState extends State<ProjectList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: GlobalHeader("Hello, John"),
       body: GridView.count(
         primary: false,
         padding: const EdgeInsets.all(20),
